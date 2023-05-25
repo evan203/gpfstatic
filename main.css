@@ -73,6 +73,10 @@ body {
 		width: 90%;
 		margin: 10px auto;
 	}
+	.container {
+		width: 90%; /* Adjust the width for smaller screens */
+		padding: 10px;
+	}
 } 
 
 /* Clear floats after the columns */
@@ -89,6 +93,10 @@ body {
 	padding: 3px;
 	border: 2px solid #fe0000; 
 	color: #fe0000;
+	width: 170px;
+}
+.linkButton a {
+	color: #fe0000;
 }
 
 /* Container for image on background with 3 columns over it */
@@ -102,14 +110,89 @@ body {
 	background-position: center;
 }
 
+/* each column to go over the image */
 .imgColumn {
-	width: 300px;
+	width: 180px;
 	height: 200px;
-	margin: 10px;
+	margin: 20px;
 	text-align: center;
 }
 
+/* responsive width to contain the body text */
+.container {
+	width: 90%;
+	max-width: 800px; /* Set the maximum width for the container */
+	margin: 0 auto; /* Center the container horizontally */
+	padding: 10px;
+}
 
+/* Width-responsive image and text layouts */
+/* Image left, text right:  */
+.responsiveContainer1 {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.content {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	max-width: 1000px; 
+	margin: 0 auto;
+}
+.image30 {
+	width: 30%;
+	max-width: 300px;
+	margin-right: 20px;
+	order: 1;
+}
+.image30 img {
+	max-width: 100%;
+	height: auto;
+}
+.text60 {
+	width: 60%;
+	order: 2;
+}
+.image60 {
+	width: 60%;
+	max-width: 300px;
+	margin-right: 20px;
+	order: 1;
+}
+.image60 img {
+	max-width: 100%;
+	height: auto;
+}
+.text30 {
+	width: 30%;
+	order: 2;
+}
 
-
+@media only screen and (max-width: 600px) {
+	.content {
+		flex-direction: column;
+	}
+	.image30 {
+		width: 100%;
+		margin-right: 0;
+		margin-bottom: 20px;
+		order: 2;
+	}
+	.text60 {
+		width: 100%;
+		order: 1;
+	}
+	.image60 {
+		width: 100%;
+		margin-right: 0;
+		margin-bottom: 20px;
+		order: 2;
+	}
+	.text30 {
+		width: 100%;
+		order: 1;
+	}
+}
 

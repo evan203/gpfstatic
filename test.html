@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Responsive Image and Text Layout</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    .content {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .image {
+      width: 30%;
+      max-width: 300px;
+      margin-right: 20px;
+      order: 1;
+    }
+	.image img {
+  max-width: 100%;
+  height: auto;
+	}
+
+    .text {
+      width: 60%;
+      order: 2;
+    }
+
+    @media only screen and (max-width: 600px) {
+      .content {
+        flex-direction: column;
+      }
+
+      .image {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 20px;
+        order: 2;
+      }
+
+      .text {
+        width: 100%;
+        order: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="content">
+      <div class="image">
+        <img src="world.jpg" alt="Image">
+      </div>
+      <div class="text">
+        <h2>Image and Text Layout</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla iaculis tellus in feugiat venenatis. Fusce dignissim ex eu lectus varius, a bibendum justo condimentum.</p>
+        <p>Sed tempor velit et vestibulum convallis. Sed eget gravida metus, at ultricies ipsum. Etiam vitae nisl eu dolor interdum tincidunt. Vestibulum faucibus velit vitae dignissim finibus.</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+
